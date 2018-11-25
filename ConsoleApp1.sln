@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28307.106
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{07CCA70D-1FDA-45A6-8A33-7C8DE707CAC6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstMeeting", "FirstMeeting\FirstMeeting.csproj", "{3A7D7475-1583-488D-AC65-0E39A5C67F6B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_FirstMeeting", "FirstMeeting\01_FirstMeeting.csproj", "{3A7D7475-1583-488D-AC65-0E39A5C67F6B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

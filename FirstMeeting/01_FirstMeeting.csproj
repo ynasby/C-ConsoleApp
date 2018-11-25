@@ -46,6 +46,7 @@
     <Compile Include="03_StringDataType.cs" />
     <Compile Include="04_ArithmeticsAndVar.cs" />
     <Compile Include="05_Methods.cs" />
+    <Compile Include="06_Variables.cs" />
     <Compile Include="_FirstMeeting.cs" />
     <Compile Include="01_HelloWorld.cs" />
     <Compile Include="02_NumericDataTypes.cs" />
