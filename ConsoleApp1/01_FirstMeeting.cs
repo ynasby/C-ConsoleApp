@@ -79,6 +79,23 @@ namespace ConsoleApp1
             }
         }
     }
+    class ProgramExpr1
+    {
+        //Expr1. Как поменять местами значения двух переменных? Можно ли это сделать без ещё одной временной переменной. Стоит ли так делать?
+        static void Main(string[] args)
+        {
+            var x = 564.3;
+            var y = -343.6;
+            Console.WriteLine("x=" + x);
+            Console.WriteLine("y=" + y);
+            Console.WriteLine(" ");
+            x = (x - y) / 2;
+            y += 2 * x;
+            x = y - 2 * x;
+            Console.WriteLine("x=" + x);
+            Console.WriteLine("y=" + y);
+        }
+    }
     class ProgramExpr2
     {
         //Expr2.Задается натуральное трехзначное число(гарантируется, что трехзначное). Развернуть его, т.е.получить трехзначное число, 
@@ -110,6 +127,7 @@ namespace ConsoleApp1
                 }
                 else
                 {
+
                     angle = 180 - ost * 30;
                 }
                 Console.WriteLine(h + " часов");
@@ -117,4 +135,47 @@ namespace ConsoleApp1
             }
         }
     }
+    class ProgramExpr4
+    {
+        //Expr4. Найти количество чисел меньших N, которые имеют простые делители X или Y.
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите целое число N:");
+            var s = Console.ReadLine();
+            var n = int.Parse(s);
+            Console.WriteLine("Введите первый простой делитель Х:");
+            s = Console.ReadLine();
+            var x = int.Parse(s);
+            Console.WriteLine("Введите второй простой делитель Y:");
+            s = Console.ReadLine();
+            var y = int.Parse(s);
+            var ost = 0;
+            Console.WriteLine("Количество чисел меньше " + n + ", которые имеют простой делитель " + x + ": " + Math.DivRem(n, x, out ost));
+            Console.WriteLine("Количество чисел меньше " + n + ", которые имеют простой делитель " + y + ": " + Math.DivRem(n, y, out ost));
+            Console.WriteLine("Всего: " + (Math.DivRem(n, x, out ost) + Math.DivRem(n, y, out ost)).ToString());
+
+        }
+    }
+    class ProgramExpr5
+    {
+        //Expr5. Найти количество високосных лет на отрезке [a, b] не используя циклы.
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите первый год:");
+            var s = Console.ReadLine();
+            var a = int.Parse(s);
+            Console.WriteLine("Введите последний год:");
+            s = Console.ReadLine();
+            var b = int.Parse(s);
+            var ost = 0;
+            var vis = Math.DivRem(b - a, 4, out ost);
+            //учитываем что каждые 100 лет год не високосный (нулевой - 1700-й, 1800-й и т.д.)
+            vis -= Math.DivRem(b - a, 100, out ost);
+            //учитываем что из невисокосных нулевых лет, каждый четвертый високосный (1600-й, 2000-й, 2400-й и т.д.)
+            vis += Math.DivRem(b - a, 400, out ost);
+            Console.WriteLine("Високосных между ними: " + vis.ToString());
+
+        }
+    }
+
 }
